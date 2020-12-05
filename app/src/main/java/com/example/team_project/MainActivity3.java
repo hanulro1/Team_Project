@@ -21,6 +21,7 @@ public class MainActivity3 extends AppCompatActivity {
         Button btn6=(Button) findViewById(R.id.button6);
         Button btn7=(Button) findViewById(R.id.button7);
         Button btn8=(Button) findViewById(R.id.button8);
+        Button btn9=(Button) findViewById(R.id.button9);
 
 
         btn3.setOnClickListener(new View.OnClickListener(){
@@ -69,6 +70,14 @@ public class MainActivity3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn9.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                finish();
+            }
+        });
+
     }
 
 

@@ -8,10 +8,10 @@
 
     <Button
         android:id="@+id/button10"
-        android:layout_width="70dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="325dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="28dp"
         android:background="@android:color/white"
         android:text="뒤로 가기"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,19 +32,20 @@
 
     <TextView
         android:id="@+id/textView25"
-        android:layout_width="399dp"
-        android:layout_height="333dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="1. 심장이나 뇌에 피가 많이 가도록 머리를 약간 낮추고 발쪽을 올리는 자세로 눕힌다.\n\n2. 쇼크 자세에서 호흡을 잘 못하거나 머리나 목에 상처가 있을 때에는 환자 몸을 수평으로 해주고 머리를 높게 해준다.\n\n3. 구토할 시에는 토사물이 폐로 흘러들지 않도록 얼굴을 옆으로 보게 하고 토사물은 곧바로 깨끗하게 닦아준다.\n\n4. 몸이 차갑거나 젖어 있을 경우 모포를 깔고 그 위에 눕혀 체온을 유지해준다. "
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="199dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="96dp"
         android:layout_height="94dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
         app:srcCompat="@drawable/shock" />
