@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity7">
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="427dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/color"
+        android:gravity="center"
+        android:text="출혈이 많은 경우"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="386dp"
+        android:layout_height="327dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="1. 장갑을 착용하여 감염을 방지한다.\n\n 2.출혈부위 상태를 확인하기 위해 상처를 노출한다.\n\n3. 출혈 부위에 약간 젖은 거즈를 대고 붕대법 및 직접압박을 한다.\n\n4. 출혈 부위에 압박 중인 거즈가 피로 축축하면 새 거즈를 덧대어 반복한다.\n\n5. 지혈이 되지 않으면 119 상황실을 통한 응급저처치를 한다."
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="70dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="325dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:text="뒤로 가기"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="108dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:srcCompat="@drawable/blood" />
+</androidx.constraintlayout.widget.ConstraintLayout>

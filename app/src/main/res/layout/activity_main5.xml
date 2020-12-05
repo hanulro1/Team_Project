@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity5">
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="70dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="52dp"
+        android:background="@android:color/white"
+        android:text="뒤로 가기"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="427dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/color"
+        android:gravity="center"
+        android:text="의식이 없을 경우"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="390dp"
+        android:layout_height="258dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        android:text="1. 먼저 호흡과 맥박을 확인하여야 한다.\n\n2. 호흡이 없을 경우 인공호흡을 진행하며, 맥박이 없을 때에는 심폐소생술을 시행한다. \n\n3. 호흡과 맥박이 있다면, 목을 뒤로 젖혀서 기도를 확보하여야 한다. \n\n4. 토할 경우에는 토사물이 기도에 들어가지 않도록 머리를 옆으로 돌려주고 빨리 병원으로 이송한다."
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="98dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:srcCompat="@drawable/consciousness" />
+</androidx.constraintlayout.widget.ConstraintLayout>
