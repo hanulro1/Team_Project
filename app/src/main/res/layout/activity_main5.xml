@@ -34,6 +34,7 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="108dp"
         android:text="1. 먼저 호흡과 맥박을 확인하여야 한다.\n\n2. 호흡이 없을 경우 인공호흡을 진행하며, 맥박이 없을 때에는 심폐소생술을 시행한다. \n\n3. 호흡과 맥박이 있다면, 목을 뒤로 젖혀서 기도를 확보하여야 한다. \n\n4. 토할 경우에는 토사물이 기도에 들어가지 않도록 머리를 옆으로 돌려주고 빨리 병원으로 이송한다."
         android:textSize="18sp"
@@ -44,8 +45,8 @@
         android:id="@+id/imageView6"
         android:layout_width="98dp"
         android:layout_height="85dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
         app:srcCompat="@drawable/consciousness" />

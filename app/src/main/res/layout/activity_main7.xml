@@ -24,8 +24,9 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="12dp"
-        android:text="1. 장갑을 착용하여 감염을 방지한다.\n\n 2.출혈부위 상태를 확인하기 위해 상처를 노출한다.\n\n3. 출혈 부위에 약간 젖은 거즈를 대고 붕대법 및 직접 압박을 한다.\n\n4. 출혈 부위에 압박 중인 거즈가 피로 축축하면 새 거즈를 덧대어 반복한다.\n\n5. 지혈이 되지 않으면 119 상황실을 통한 응급처치를 한다."
+        android:text="1. 장갑을 착용하여 감염을 방지한다.\n\n2.출혈부위 상태를 확인하기 위해 상처를 노출한다.\n\n3. 출혈 부위에 약간 젖은 거즈를 대고 붕대법 및 직접 압박을 한다.\n\n4. 출혈 부위에 압박 중인 거즈가 피로 축축하면 새 거즈를 덧대어 반복한다.\n\n5. 지혈이 되지 않으면 119 상황실을 통한 응급처치를 \n한다."
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -45,8 +46,8 @@
         android:id="@+id/imageView3"
         android:layout_width="96dp"
         android:layout_height="73dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
         app:srcCompat="@drawable/blood" />

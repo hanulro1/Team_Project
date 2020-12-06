@@ -9,9 +9,10 @@
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
-        android:layout_height="228dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:text="1. 화상 부위의 옷과 장신구를 제거한다. \n단, 제거가 어려울 경우 억지로 제거는 하지 않는다.\n\n2. 흐르는 찬물에 20~30분 가량 화상 부위를 식힌다.\n\n3. 물집이 생기면 터트리지 않고 그대로 둔다. \n\n4. 화상은 감염에 취약하기 때문에 충분히 식힌 후 소독된 약간 젖은 거즈로 덮는다.\n\n"
+        android:text="1. 화상 부위의 옷과 장신구를 제거한다. \n단, 제거가 어려울 경우 억지로 제거는 하지 않는다.\n\n2. 흐르는 찬물에 20~30분 가량 화상 부위를 식힌다.\n\n3. 물집이 생기면 터트리지 않고 그대로 둔다. \n\n4. 화상은 감염에 취약하기 때문에 충분히 식힌\n 후 소독된 약간 젖은 거즈로 덮는다.\n\n"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
@@ -45,8 +46,8 @@
         android:id="@+id/imageView4"
         android:layout_width="93dp"
         android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         app:srcCompat="@drawable/burn" />
