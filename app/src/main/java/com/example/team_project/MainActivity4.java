@@ -10,8 +10,12 @@ import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -47,17 +51,82 @@ import java.util.List;
 import java.util.Locale;
 
 public class MainActivity4 extends AppCompatActivity {
+    dbHelper mydbhelper;
+    SQLiteDatabase mysqlDB;
+
+    EditText editaddress,edit;
+    Button btn1, btn2, btn3;
+    public class dbHelper extends SQLiteOpenHelper{
+        public dbHelper(Context context){
+            super(context, "address", null, 1);   //telDB -> 데이터베이스 이름
+        }
+
+        @Override
+        public void onCreate(SQLiteDatabase db){
+            db.execSQL("CREATE TABLE contacts(Address CHAR(20) PRIMARY KEY)");
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {       // 테이블 초기화
+            db.execSQL("DROP TABLE IF EXISTS contacts");
+            onCreate(db);
+        }
+
+    }
+
     private static final String ERROR_MSG="Google play services are unavailable.";
     private TextView mTextView;
     private static final int LOCATION_PERMISSION_REQUEST=1;
     private LocationRequest mLocationRequest;
 
-    EditText edit=(EditText)findViewById(R.id.editText1);
-     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+        // 데이터베이스
+        setTitle("주소지");
+
+        btn1=(Button) findViewById(R.id.button13);
+        btn2=(Button) findViewById(R.id.button14);
+        btn3=(Button) findViewById(R.id.button15);
+        editaddress=(EditText)findViewById(R.id.editAddress);
+        edit=(EditText)findViewById(R.id.editText1);
+
+        mydbhelper=new dbHelper(this);
+        btn1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                mysqlDB=mydbhelper.getWritableDatabase();       // 내용을 쓸 수 있는 데이터베이스
+                mydbhelper.onUpgrade(mysqlDB,1,2);
+                mysqlDB.close();
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                mysqlDB=mydbhelper.getWritableDatabase();
+                mysqlDB.execSQL("INSERT INTO contacts VALUES('"+edit.getText().toString() +"');'");
+                mysqlDB.close();
+            }
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                mysqlDB=mydbhelper.getReadableDatabase();
+                Cursor cursor;  // rawQuery에서 나온 결과를 다 가지고 있는 변수
+                cursor=mysqlDB.rawQuery("SELECT * FROM contacts;", null);
+                String Addr="주소: \r\n";
+                while(cursor.moveToNext()){
+                    Addr+=cursor.getString(0)+"\r\n";
+                }
+                editaddress.setText(Addr);
+                cursor.close();
+                mysqlDB.close();
+            }
+        });
+
 
         // 텍스트뷰의 참조를 얻는다.
         mTextView=findViewById(R.id.myLocationText);
