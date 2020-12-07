@@ -306,7 +306,7 @@ public class MainActivity4 extends AppCompatActivity {
                     sb.append(address.getCountryName()).append(", ");   // 나라 코드
                     sb.append(address.getAdminArea()).append(", ");  // 시
                     sb.append(address.getSubLocality()).append(", ");  // 구
-                    sb.append(address.getSubThoroughfare()).append(", ");  // 번지
+                    sb.append(address.getSubThoroughfare()).append("번지");  // 번지
                 }
                 returnString=sb.toString();
             }catch (IOException e){
@@ -346,7 +346,7 @@ public class MainActivity4 extends AppCompatActivity {
 
         String address=geocodeLocation(location);
 
-        String outputText="당신의 현 위치는\n";
+        String outputText="현 위치는\n";
         if (!address.isEmpty()){
             outputText+=address;
         }

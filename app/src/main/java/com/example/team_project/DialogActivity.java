@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.team_project;
 
 import android.content.ComponentName;
 import android.content.Context;

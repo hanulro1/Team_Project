@@ -8,10 +8,9 @@
 
     <TextView
         android:id="@+id/textView24"
-        android:layout_width="427dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="414dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:background="@drawable/color"
         android:gravity="center"
         android:text="그 외"
@@ -34,12 +33,12 @@
 
     <TextView
         android:id="@+id/textView28"
-        android:layout_width="wrap_content"
+        android:layout_width="392dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="- 정상일 때 동공은 빛을 받으면 수축한다.\n- 동공이 열려있으면 생명이 위험하다.\n- 좌우 동공 크기가 다를 때에는 뇌에 이상이 있는 것이다. 의식을 잃었다면 기도를 확보한다."
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
@@ -57,12 +56,12 @@
 
     <TextView
         android:id="@+id/textView30"
-        android:layout_width="wrap_content"
+        android:layout_width="394dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="- 가슴의 움직임을 살펴본다. \n- 뺨을 입과 코 가까이에 대 보고 호흡의 정도를 알아낸다."
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
@@ -80,12 +79,12 @@
 
     <TextView
         android:id="@+id/textView32"
-        android:layout_width="wrap_content"
+        android:layout_width="394dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="- 인지, 중지, 약지 손 끝으로 환자의 손목 맥을 짚어본다.\n- 앞의 방법으로 알아내기 어려운 경우에는 목젖에서 바깥으로 약 3cm떨어진 부위(경동맥)을 만져본다.\n- 가슴에 귀를 가까이 대 심박동을 들어본다."
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
@@ -94,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="304dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="28dp"
         android:background="@android:color/white"
         android:text="뒤로 가기"
         app:layout_constraintStart_toStartOf="parent"
