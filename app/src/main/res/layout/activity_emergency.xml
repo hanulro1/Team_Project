@@ -8,13 +8,13 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="410dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="414dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/color"
         android:gravity="center"
         android:text=" 상황 별 응급조치"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,7 +43,7 @@
     <Button
         android:id="@+id/button3"
         android:layout_width="170dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
         android:background="@android:color/white"
@@ -55,7 +55,7 @@
     <Button
         android:id="@+id/button5"
         android:layout_width="170dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="45dp"
         android:background="@android:color/white"
@@ -67,7 +67,7 @@
     <Button
         android:id="@+id/button7"
         android:layout_width="170dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="45dp"
         android:background="@android:color/white"
@@ -79,7 +79,7 @@
     <Button
         android:id="@+id/button4"
         android:layout_width="170dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="224dp"
         android:layout_marginTop="60dp"
         android:background="@android:color/white"
@@ -91,7 +91,7 @@
     <Button
         android:id="@+id/button6"
         android:layout_width="170dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="224dp"
         android:layout_marginTop="45dp"
         android:background="@android:color/white"
@@ -103,7 +103,7 @@
     <Button
         android:id="@+id/button8"
         android:layout_width="170dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="224dp"
         android:layout_marginTop="45dp"
         android:background="@android:color/white"
@@ -114,10 +114,10 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="70dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="324dp"
-        android:layout_marginTop="65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="116dp"
         android:background="@android:color/white"
         android:text="뒤로 가기"
         app:layout_constraintStart_toStartOf="parent"

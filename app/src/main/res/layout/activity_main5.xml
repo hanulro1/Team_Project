@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="304dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="164dp"
         android:background="@android:color/white"
         android:text="뒤로 가기"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
     <TextView
         android:id="@+id/textView10"
         android:layout_width="427dp"
-        android:layout_height="52dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:background="@drawable/color"
         android:gravity="center"
@@ -32,12 +32,14 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
+        android:layout_width="397dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="108dp"
+        android:layout_marginEnd="8dp"
         android:text="1. 먼저 호흡과 맥박을 확인하여야 한다.\n\n2. 호흡이 없을 경우 인공호흡을 진행하며, 맥박이 없을 때에는 심폐소생술을 시행한다. \n\n3. 호흡과 맥박이 있다면, 목을 뒤로 젖혀서 기도를 확보하여야 한다. \n\n4. 토할 경우에는 토사물이 기도에 들어가지 않도록 머리를 옆으로 돌려주고 빨리 병원으로 이송한다."
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
