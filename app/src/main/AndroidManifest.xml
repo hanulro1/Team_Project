@@ -12,27 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity11"></activity>
-        <activity android:name=".MainActivity10" />
-        <activity android:name=".MainActivity9" />
-        <activity android:name=".MainActivity8" />
-        <activity android:name=".MainActivity7" />
-        <activity android:name=".MainActivity6" />
-        <activity android:name=".MainActivity5" />
-        <activity android:name=".MainActivity4" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity3" />
-        <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity11" />
+        <activity android:name=".MainActivity10" />
+        <activity android:name=".MainActivity9" />
+        <activity android:name=".MainActivity8" />
+        <activity android:name=".MainActivity7" />
+        <activity android:name=".MainActivity6" />
+        <activity android:name=".MainActivity5" />
+        <activity android:name=".AddressActivity" />
+        <activity android:name=".EmergencyActivity" />
+        <activity android:name=".DialogActivity"/>
+        <activity android:name=".CallActivity" />
     </application>
 
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    <uses-permission android:name="android.permission.DIAL_PHONE"></uses-permission>
 </manifest>

@@ -1,117 +1,91 @@
 package com.example.team_project;
 
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.IBinder;
-import android.os.Message;
-import android.os.Messenger;
-import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class DialogActivity extends AppCompatActivity {
 
     //dbHelper는 클래스이름
-    dbHelper mydbhelper;
+    ContactdbHelper mydbhelper;
+    Intent intent;
     EditText edtName, edtPhone, edtRes1, edtRes2;
-    Button initB, insB, searchB;
-    SQLiteDatabase mysqlDB;
+    Button backbtn, initB, insB, searchB;
 
-    //SQLite에서 제공
-    public class dbHelper extends SQLiteOpenHelper {
-        public dbHelper(Context context){
-            //telDB 라는 데이터베이스 (데이터베이스 이름이다.)
-            super(context, "telDB", null, 1);
-        }
+    final static String dbName = "contacts.db";
+    final static int dbVersion = 2;
 
-        @Override
-        //db는 dbhelper에서 만들어졌던 'tellDB'의 의미
-        public void onCreate(SQLiteDatabase db){
-            //괄호 안은 SQL안에서 사용하는 명령어
-            //contacts는 테이블 이름
-            db.execSQL("CREATE TABLE contacts(gName CHAR(20) PRIMARY KEY, gphone CHAR(20))");
-        }
-        @Override
-        //onUpgrade는 초기화하는 용도
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-            db.execSQL("DROP TABLE IF EXISTS contacts");
-            onCreate(db);
-        }
-
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_dialog);
 
-        setTitle(" 데이터베이스 실습 ");
+        setTitle(" 전화번호부를 작성해주세요 ");
+        backbtn = (Button) findViewById(R.id.backbtn);
         edtName = (EditText) findViewById(R.id.editText);
         edtPhone = (EditText) findViewById(R.id.editTextPhone);
         edtRes1 = (EditText) findViewById(R.id.editTextNames);
         edtRes2 = (EditText) findViewById(R.id.editTextPhones);
-        initB = (Button) findViewById(R.id.button5);
-        insB = (Button) findViewById(R.id.button6);
-        searchB = (Button) findViewById(R.id.button7);
-
+        initB = (Button) findViewById(R.id.initB);
+        insB = (Button) findViewById(R.id.insB);
+        searchB = (Button) findViewById(R.id.searchB);
+        mydbhelper = new ContactdbHelper(this, dbName, null, dbVersion);
         //context에서 dbhelper를 생성해 mydbhelper에 넣기
         //mydbhepler는 현재 사용자가 만든 하나의 데이터베이스를 관리하는 하나의 dbms 파일
-        mydbhelper = new dbHelper(this);
-        initB.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                mysqlDB = mydbhelper.getWritableDatabase();
-                //초기화
-                mydbhelper.onUpgrade(mysqlDB, 1, 2);
-                mysqlDB.close();
-            }
-        });
 
-        insB.setOnClickListener(new View.OnClickListener(){
-            @Override
+        View.OnClickListener myclick = new View.OnClickListener() {
             public void onClick(View v){
-                mysqlDB = mydbhelper.getWritableDatabase();
-                mysqlDB.execSQL(" INSERT INTO contacts VALUES ('"+edtName.getText().toString() + "','"+edtPhone.getText().toString() + "');");
-                mysqlDB.close();
-            }
-        });
-        //읽어오는 역할(조회)
-        searchB.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                mysqlDB = mydbhelper.getReadableDatabase();
-                Cursor cursor;
-                cursor = mysqlDB.rawQuery("SELECT * FROM contacts", null);
-                String strname = " name \r\n"+"----------------"+"\r\n";
-                String strphone = "phone number" + "\r\n" + "-------------" + "\r\n";
-                while(cursor.moveToNext()){
-                    //0과 1은 필드번호
-                    strname += cursor.getString(0) + "\r\n";
-                    strphone += cursor.getString(1) + "\r\n";
+
+                SQLiteDatabase contectdb;
+                String strname = "이름 \r\n"+"----------------"+"\r\n";
+                String strphone = "전화번호" + "\r\n" + "-------------" + "\r\n";
+
+                switch(v.getId()){
+                    case R.id.backbtn:
+                        intent = new Intent(DialogActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.initB:
+                        contectdb = mydbhelper.getWritableDatabase();
+                        //초기화
+                        mydbhelper.onUpgrade(contectdb, 1, 2);
+                        contectdb.close();
+                        edtRes1.setText(strname); edtRes2.setText(strphone);
+                        break;
+                    case R.id.insB:
+                        //추가
+                        contectdb = mydbhelper.getWritableDatabase();
+                        contectdb.execSQL(" INSERT INTO contacts VALUES ('"+edtName.getText().toString() + "','"+edtPhone.getText().toString() + "');");
+                        edtName.setText(null); edtPhone.setText(null);
+                        contectdb.close();
+                        break;
+                    case R.id.searchB:
+                        //읽어오는 역할(조회)
+                        contectdb = mydbhelper.getReadableDatabase();
+                        Cursor cursor;
+                        cursor = contectdb.rawQuery("SELECT * FROM contacts", null);
+                        while(cursor.moveToNext()){
+                            //0과 1은 필드번호
+                            strname += cursor.getString(0) + "\r\n";
+                            strphone += cursor.getString(1) + "\r\n";
+                        }
+                        edtRes1.setText(strname);
+                        edtRes2.setText(strphone);
+                        cursor.close();
+                        contectdb.close();
+                        break;
                 }
-                edtRes1.setText(strname);
-                edtRes2.setText(strphone);
-                cursor.close();
-                mysqlDB.close();
             }
-        });
-
+        };
+        backbtn.setOnClickListener(myclick);
+        initB.setOnClickListener(myclick);
+        insB.setOnClickListener(myclick);
+        searchB.setOnClickListener(myclick);
     }
 }

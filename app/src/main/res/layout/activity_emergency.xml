@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/initB"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/searchB"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -74,7 +74,7 @@
         android:scaleType="fitXY"
         android:text="5. 쇼크증상이 나타난 경우"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/initB" />
 
     <Button
         android:id="@+id/button4"
@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/insB"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="224dp"
@@ -110,7 +110,7 @@
         android:scaleType="fitXY"
         android:text="6. 그 외"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/insB" />
 
     <Button
         android:id="@+id/button9"

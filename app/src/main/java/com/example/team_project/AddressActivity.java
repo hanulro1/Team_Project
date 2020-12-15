@@ -50,7 +50,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity4 extends AppCompatActivity {
+public class AddressActivity extends AppCompatActivity {
     dbHelper mydbhelper;
     SQLiteDatabase mysqlDB;
 
@@ -82,7 +82,7 @@ public class MainActivity4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.activity_address);
         // 데이터베이스
         setTitle("주소지");
 
@@ -222,7 +222,7 @@ public class MainActivity4 extends AppCompatActivity {
                         try{
                             // 위치 설정 문제를 해결할 수 있는 대화상자를 사용자에게 보여준다.
                             ResolvableApiException resolvable=(ResolvableApiException)e;
-                            resolvable.startResolutionForResult(MainActivity4.this, REQUEST_CHECK_SETTINGS);
+                            resolvable.startResolutionForResult(AddressActivity.this, REQUEST_CHECK_SETTINGS);
                         }catch (IntentSender.SendIntentException sendEx){
                             Log.e(TAG, "Location Settings resolution failed.", sendEx);
                         }
