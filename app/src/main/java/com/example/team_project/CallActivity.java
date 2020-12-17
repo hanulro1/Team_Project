@@ -69,8 +69,8 @@ public class CallActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //list를 누르면 전화 연결
-                int num = Integer.parseInt(phone[i]);
-                final Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+num));
+                //int num = Integer.parseInt(phone[i]);
+                final Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+phone[i]));
                 startActivity(intent);
             }
         });
