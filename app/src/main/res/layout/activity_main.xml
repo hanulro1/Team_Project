@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="428dp"
-        android:layout_height="163dp"
+        android:layout_width="430dp"
+        android:layout_height="146dp"
         android:background="@drawable/color"
         android:textColorLink="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,8 +17,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="138dp"
-        android:layout_height="104dp"
+        android:layout_width="132dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/sos" />
@@ -27,7 +28,7 @@
         android:id="@+id/textView2"
         android:layout_width="163dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="44dp"
         android:text="응급 상황을"
         android:textSize="30sp"
         android:textStyle="bold|italic"
@@ -145,8 +146,8 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
         android:text="아래 메뉴 중 한 가지를 선택해주세요."
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
