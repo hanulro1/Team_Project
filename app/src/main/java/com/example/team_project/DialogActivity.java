@@ -16,7 +16,7 @@ public class DialogActivity extends AppCompatActivity {
     ContactdbHelper mydbhelper;
     Intent intent;
     EditText edtName, edtPhone, edtRes1, edtRes2;
-    Button backbtn, initB, insB, searchB;
+    Button backbtn, initB, insB, searchB, delete;
 
     final static String dbName = "contacts.db";
     final static int dbVersion = 2;
@@ -35,6 +35,7 @@ public class DialogActivity extends AppCompatActivity {
         initB = (Button) findViewById(R.id.initB);
         insB = (Button) findViewById(R.id.insB);
         searchB = (Button) findViewById(R.id.searchB);
+        delete = (Button) findViewById(R.id.delete);
         mydbhelper = new ContactdbHelper(this, dbName, null, dbVersion);
         //context에서 dbhelper를 생성해 mydbhelper에 넣기
         //mydbhepler는 현재 사용자가 만든 하나의 데이터베이스를 관리하는 하나의 dbms 파일
@@ -80,6 +81,10 @@ public class DialogActivity extends AppCompatActivity {
                         cursor.close();
                         contectdb.close();
                         break;
+                    case R.id.delete:
+                        intent = new Intent(DialogActivity.this, DeleteContactActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         };
@@ -87,5 +92,6 @@ public class DialogActivity extends AppCompatActivity {
         initB.setOnClickListener(myclick);
         insB.setOnClickListener(myclick);
         searchB.setOnClickListener(myclick);
+        delete.setOnClickListener(myclick);
     }
 }

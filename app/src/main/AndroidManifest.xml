@@ -29,6 +29,7 @@
         <activity android:name=".EmergencyActivity" />
         <activity android:name=".DialogActivity"/>
         <activity android:name=".CallActivity" />
+        <activity android:name=".DeleteContactActivity" />
     </application>
 
     <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
