@@ -10,7 +10,7 @@
         android:id="@+id/button5"
         android:layout_width="0dp"
         android:layout_height="66dp"
-        android:background="@drawable/button_color"
+        android:background="@drawable/edge"
         android:text="통화를 하시려면 이름을 누르세요."
         android:textColorLink="#FFFFFF"
         android:textSize="20sp"
