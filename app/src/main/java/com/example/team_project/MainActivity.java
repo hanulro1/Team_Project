@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener myclick = new View.OnClickListener() {
             public void onClick(View v) {
                 if (callbtn.equals(v)) {
-                    intent1 = new Intent(MainActivity.this, CallActivity.class);
+                    intent1 = new Intent(MainActivity.this, SituationActivity.class);
                     startActivity(intent1);
                 } else if (emergencybtn.equals(v)) {
                     intent2 = new Intent (MainActivity.this, EmergencyActivity.class);

@@ -4,20 +4,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 public class DeleteContactActivity extends AppCompatActivity {
 
@@ -35,7 +30,7 @@ public class DeleteContactActivity extends AppCompatActivity {
         setContentView(R.layout.activity_delete);
 
         setTitle(" 연락처 삭제 ");
-        backbtn = (Button) findViewById(R.id.backbtn);
+        backbtn = (Button) findViewById(R.id.back);
         mydbhelper = new ContactdbHelper(this, dbName, null, dbVersion);
 
         final SQLiteDatabase contectdb;
@@ -85,7 +80,7 @@ public class DeleteContactActivity extends AppCompatActivity {
             public void onClick(View v){
 
                 switch(v.getId()){
-                    case R.id.backbtn:
+                    case R.id.back:
                         intent = new Intent(DeleteContactActivity.this, DialogActivity.class);
                         startActivity(intent);
                         break;

@@ -27,7 +27,7 @@ public class DialogActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dialog);
 
         setTitle(" 전화번호부를 작성해주세요 ");
-        backbtn = (Button) findViewById(R.id.backbtn);
+        backbtn = (Button) findViewById(R.id.back);
         edtName = (EditText) findViewById(R.id.editText);
         edtPhone = (EditText) findViewById(R.id.editTextPhone);
         edtRes1 = (EditText) findViewById(R.id.editTextNames);
@@ -48,7 +48,7 @@ public class DialogActivity extends AppCompatActivity {
                 String strphone = "전화번호" + "\r\n" + "-------------" + "\r\n";
 
                 switch(v.getId()){
-                    case R.id.backbtn:
+                    case R.id.back:
                         intent = new Intent(DialogActivity.this, MainActivity.class);
                         startActivity(intent);
                         break;
