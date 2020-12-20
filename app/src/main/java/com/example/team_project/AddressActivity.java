@@ -53,9 +53,9 @@ import java.util.Locale;
 public class AddressActivity extends AppCompatActivity {
     dbHelper mydbhelper;
     SQLiteDatabase mysqlDB;
-
     EditText editaddress,edit;
     Button btn1, btn2, btn3;
+
     public class dbHelper extends SQLiteOpenHelper{
         public dbHelper(Context context){
             super(context, "address", null, 1);   //telDB -> 데이터베이스 이름

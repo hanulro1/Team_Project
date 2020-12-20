@@ -30,11 +30,11 @@
         <activity android:name=".DialogActivity"/>
         <activity android:name=".DeleteContactActivity" />
         <activity android:name=".SituationActivity"/>
-        <receiver android:name=".SituationActivity">
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
-            </intent-filter>
-        </receiver>
+        <activity android:name=".Situation1"/>
+        <activity android:name=".Situation2"/>
+        <activity android:name=".Situation3"/>
+        <activity android:name=".Situation4"/>
+        <activity android:name=".Situation5"/>
     </application>
 
     <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
