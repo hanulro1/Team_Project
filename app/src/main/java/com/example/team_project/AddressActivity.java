@@ -55,7 +55,8 @@ public class AddressActivity extends AppCompatActivity {
     SQLiteDatabase mysqlDB;
     EditText editaddress,edit;
     Button btn1, btn2, btn3;
-
+    public static Context context_addressActivity;
+    public String HelpAd;
     public class dbHelper extends SQLiteOpenHelper{
         public dbHelper(Context context){
             super(context, "address", null, 1);   //telDB -> 데이터베이스 이름
@@ -84,6 +85,7 @@ public class AddressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_address);
         // 데이터베이스
+        context_addressActivity=this;
         setTitle("주소지");
 
         btn1=(Button) findViewById(R.id.button13);
@@ -345,13 +347,12 @@ public class AddressActivity extends AppCompatActivity {
         }
 
         String address=geocodeLocation(location);
-
         String outputText="현 위치는\n";
         if (!address.isEmpty()){
             outputText+=address;
         }
         outputText+="\n입니다.";
-
+        HelpAd=outputText;
         mTextView.setText(outputText);
     }
 }

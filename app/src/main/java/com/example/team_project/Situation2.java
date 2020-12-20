@@ -23,6 +23,7 @@ public class Situation2 extends AppCompatActivity {
 
     final static String dbName = "contacts.db";
     final static int dbVersion = 2;
+    String addr=((AddressActivity)AddressActivity.context_addressActivity).HelpAd;
 
     private static final int REQUEST_USED_PERMISSION = 200;
     private static final String[] needPermissons = { Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.INTERNET, Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.SEND_SMS ,Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION};
@@ -78,7 +79,7 @@ public class Situation2 extends AppCompatActivity {
         }
 
         SmsManager smsManager1 = SmsManager.getDefault();
-        String message1 = "숨을 잘 못쉬겠어요. 빨리 도와주세요.";
+        String message1 = "숨을 잘 못쉬겠어요. 빨리 도와주세요.\n"+addr;
         try {
             for (int i=1; i<phone.length;i++) {
                 smsManager1.sendTextMessage(phone[i], null, message1, null, null);
