@@ -6,15 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity10 extends AppCompatActivity {
+public class UnconsciousActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main10);
+        setContentView(R.layout.activity_unconscious);
 
-
-        Button btn=(Button)findViewById(R.id.button11);
+        Button btn=(Button)findViewById(R.id.initB);
 
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -22,5 +21,7 @@ public class MainActivity10 extends AppCompatActivity {
                 finish();
             }
         });
+
     }
+
 }

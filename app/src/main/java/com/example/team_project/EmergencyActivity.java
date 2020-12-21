@@ -27,14 +27,14 @@ public class EmergencyActivity extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(EmergencyActivity.this, MainActivity5.class);
+                Intent intent=new Intent(EmergencyActivity.this, UnconsciousActivity.class);
                 startActivity(intent);
             }
         });
         btn4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(EmergencyActivity.this, MainActivity6.class);
+                Intent intent=new Intent(EmergencyActivity.this, BurnActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +42,7 @@ public class EmergencyActivity extends AppCompatActivity {
         btn5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(EmergencyActivity.this, MainActivity7.class);
+                Intent intent=new Intent(EmergencyActivity.this, BleedingActivity.class);
                 startActivity(intent);
             }
         });
@@ -50,7 +50,7 @@ public class EmergencyActivity extends AppCompatActivity {
         btn6.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(EmergencyActivity.this, MainActivity8.class);
+                Intent intent=new Intent(EmergencyActivity.this, AirwayActivity.class);
                 startActivity(intent);
             }
         });
@@ -58,7 +58,7 @@ public class EmergencyActivity extends AppCompatActivity {
         btn7.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(EmergencyActivity.this, MainActivity9.class);
+                Intent intent=new Intent(EmergencyActivity.this, ShockActivity.class);
                 startActivity(intent);
             }
         });
@@ -66,7 +66,7 @@ public class EmergencyActivity extends AppCompatActivity {
         btn8.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(EmergencyActivity.this, MainActivity10.class);
+                Intent intent=new Intent(EmergencyActivity.this, etcActivity.class);
                 startActivity(intent);
             }
         });

@@ -6,14 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity7 extends AppCompatActivity {
+public class AirwayActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main7);
+        setContentView(R.layout.activity_airway);
 
-        Button btn=(Button)findViewById(R.id.button2);
+
+        Button btn=(Button)findViewById(R.id.searchB);
 
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -22,4 +23,4 @@ public class MainActivity7 extends AppCompatActivity {
             }
         });
     }
-    }
+}

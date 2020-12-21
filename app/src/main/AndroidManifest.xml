@@ -18,13 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity11" />
-        <activity android:name=".MainActivity10" />
-        <activity android:name=".MainActivity9" />
-        <activity android:name=".MainActivity8" />
-        <activity android:name=".MainActivity7" />
-        <activity android:name=".MainActivity6" />
-        <activity android:name=".MainActivity5" />
+        <activity android:name=".etcActivity" />
+        <activity android:name=".ShockActivity" />
+        <activity android:name=".AirwayActivity" />
+        <activity android:name=".BleedingActivity" />
+        <activity android:name=".BurnActivity" />
+        <activity android:name=".UnconsciousActivity" />
         <activity android:name=".AddressActivity" />
         <activity android:name=".EmergencyActivity" />
         <activity android:name=".DialogActivity"/>
